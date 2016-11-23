@@ -24,10 +24,10 @@
 define('DB_NAME', 'maicon');
 
 /** Usuário do banco de dados MySQL */
-define('DB_USER', 'maicon');
+define('DB_USER', 'root');
 
 /** Senha do banco de dados MySQL */
-define('DB_PASSWORD', 'maicon');
+define('DB_PASSWORD', '');
 
 /** Nome do host do MySQL */
 define('DB_HOST', 'localhost');
@@ -68,7 +68,7 @@ define('NONCE_SALT',       'yE_v<Gm6a@=4bOzC}Wy{|$7!]IE_Blmh!{2QoF]RX_nw0e+,E_TL
  * Você pode ter várias instalações em um único banco de dados se você der
  * para cada um um único prefixo. Somente números, letras e sublinhados!
  */
-$table_prefix  = 'ma';
+$table_prefix  = 'ma_';
 
 /**
  * Para desenvolvedores: Modo debugging WordPress.

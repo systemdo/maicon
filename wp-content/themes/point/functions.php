@@ -496,3 +496,19 @@ function mts_megamenu_parent_element( $selector ) {
     return '.primary-navigation';
 }
 add_filter( 'wpmm_container_selector', 'mts_megamenu_parent_element' );
+
+
+function full_comment_count() {
+	global $post;
+	$url = get_permalink($post->ID);  
+
+	$filecontent = file_get_contents('https://graph.facebook.com/?ids=' . $url);
+	$json = json_decode($filecontent);
+	$count = $json->$url->comments;
+	$wpCount = get_comments_number();
+	$realCount = $count + $wpCount;
+	if ($realCount == 0 || !isset($realCount)) {
+	    $realCount = 0;
+	}
+	return $realCount;
+}

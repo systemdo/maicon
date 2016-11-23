@@ -13,9 +13,23 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
+<meta property="fb:app_id" content="664358707068523"/>
 </head>
 
 <body id="blog" <?php body_class(); ?>>
+<!-- references 
+	https://www.tutoriart.com.br/comentarios-do-facebook-no-wordpress-com-contador-e-moderacao/
+	http://suporte.leadlovers.com.br/criar-conta-e-aplicativo-no-facebook-developers/
+-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=664358707068523";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 <?php
 	$point_button_section = get_theme_mod('point_button_section', '1');
 	$point_button_bg_color = get_theme_mod('point_button_bg_color');
